@@ -11,14 +11,14 @@ const AHTGTheme = createTheme({
     primary: {
       light: Blue[300],
       main: Blue[500],
-      dark: Blue[700],
-      contrastText: Blue[100],
+      dark: Blue[800],
+      contrastText: Blue['A100'],
     },
     secondary: {
-      light: Grey[200],
-      main: Grey[600],
+      light: Grey[300],
+      main: Grey[500],
       dark: Grey[800],
-      contrastText: Grey[100],
+      contrastText: Grey['A100'],
     },
     action: {
       active: 'rgba(0, 0, 0, 0.54)',

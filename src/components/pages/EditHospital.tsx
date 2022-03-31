@@ -10,6 +10,9 @@ import { getHospital } from '../../services/api/Api';
 import ContentLoader from '../atoms/ContentLoader';
 import Errors from '../../constants/Errors';
 import { WrapWithLink } from '../../hoc';
+import { Paper } from '@mui/material';
+import Grey from '../../constants/colors/Grey';
+import Blue from '../../constants/colors/Blue';
 
 type ParamTypes = {
   id: string;
@@ -42,15 +45,17 @@ const EditHospital = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Breadcrumbs
-            aria-label='breadcrumb'
-            separator={<NavigateNextIcon fontSize='small' />}
-          >
-            <WrapWithLink underline='hover' color='secondary' link='/'>
-              Home
-            </WrapWithLink>
-            <Typography color='secondary.light'>Breadcrumbs</Typography>
-          </Breadcrumbs>
+          <Paper elevation={0} sx={{ backgroundColor: Blue[50], p: 2 }}>
+            <Breadcrumbs
+              aria-label='breadcrumb'
+              separator={<NavigateNextIcon fontSize='small' />}
+            >
+              <WrapWithLink underline='hover' color='secondary' link='/'>
+                Home
+              </WrapWithLink>
+              <Typography color='secondary.light'>Breadcrumbs</Typography>
+            </Breadcrumbs>
+          </Paper>
         </Grid>
 
         <Grid item xs={12}>
