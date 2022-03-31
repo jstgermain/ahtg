@@ -11,7 +11,6 @@ import ContentLoader from '../atoms/ContentLoader';
 import Errors from '../../constants/Errors';
 import { WrapWithLink } from '../../hoc';
 import { Paper } from '@mui/material';
-import Grey from '../../constants/colors/Grey';
 import Blue from '../../constants/colors/Blue';
 
 type ParamTypes = {

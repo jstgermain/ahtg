@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import { WrapWithLink } from '../../hoc/WrapWithLink';
+import ManageHospitalMenu from '../atoms/molecules/ManageHospitalMenu';
 
 interface Props {
   anchorEl: null | HTMLElement;
@@ -19,6 +20,7 @@ interface Props {
   hospitals: string[];
   open: boolean | false;
   openMoreMenu: (event: any) => any | void;
+  removeHospital: () => any | void;
   selectedHospital: string | undefined;
 }
 
@@ -29,6 +31,7 @@ const HospitalList = (props: Props) => {
     hospitals,
     openMoreMenu,
     open,
+    removeHospital,
     selectedHospital,
   } = props;
   const theme = useTheme();
@@ -87,27 +90,13 @@ const HospitalList = (props: Props) => {
         </Fragment>
       ))}
 
-      <Menu
-        id='long-menu'
-        MenuListProps={{
-          'aria-labelledby': 'long-button',
-        }}
+      <ManageHospitalMenu
         anchorEl={anchorEl}
         open={open}
-        onClose={closeMoreMenu}
-        PaperProps={{
-          style: {
-            width: '20ch',
-          },
-        }}
-      >
-        <MenuItem>
-          <WrapWithLink link={`/hospital/${selectedHospital}`}>
-            Edit - {selectedHospital}
-          </WrapWithLink>
-        </MenuItem>
-        <MenuItem>Delete - {selectedHospital}</MenuItem>
-      </Menu>
+        closeMoreMenu={closeMoreMenu}
+        removeHospital={removeHospital}
+        selectedHospital={selectedHospital}
+      />
     </List>
   );
 };

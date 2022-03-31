@@ -8,3 +8,6 @@ const api = create({
 export const getHospitals = async () => await api.get(`/hospitals`);
 
 export const getHospital = async (id: any) => await api.get(`/hospitals/${id}`);
+
+export const removeHospital = async (id: any) =>
+  await api.delete(`/hospitals/${id}`);

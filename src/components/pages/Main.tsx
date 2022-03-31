@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react';
+import { isEmpty } from 'ramda';
 import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { isEmpty } from 'ramda';
-import { getHospitals } from '../../services/api/Api';
+import { getHospitals, removeHospital } from '../../services/api/Api';
 import ContentLoader from '../atoms/ContentLoader';
 import { HospitalList } from '../organisms';
 import Errors from '../../constants/Errors';
@@ -15,6 +21,7 @@ const Main = () => {
   const [hospitals, setHospitals] = useState(Object);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const [openAlert, setOpenAlert] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -40,7 +47,26 @@ const Main = () => {
 
   const handleCloseMoreMenu = () => {
     setAnchorEl(null);
-    setSelectedHospital(undefined);
+  };
+
+  const handleRemoveHospital = async () => {
+    // setSelectedHospital(undefined);
+    const response = await removeHospital(selectedHospital);
+
+    if (!response.ok) setError(response.problem);
+
+    handleClickOpenAlert();
+    setOpenAlert(false);
+    setLoading(true);
+  };
+
+  const handleClickOpenAlert = () => {
+    handleCloseMoreMenu();
+    setOpenAlert(true);
+  };
+
+  const handleCloseAlert = () => {
+    setOpenAlert(false);
   };
 
   return (
@@ -73,7 +99,38 @@ const Main = () => {
               open={open}
               openMoreMenu={handleClickMoreMenu}
               selectedHospital={selectedHospital}
+              removeHospital={handleClickOpenAlert}
             />
+
+            <Dialog
+              open={openAlert}
+              onClose={handleCloseAlert}
+              aria-labelledby='alert-dialog-title'
+              aria-describedby='alert-dialog-description'
+            >
+              <DialogTitle id='alert-dialog-title'>
+                Whoa there buck-a-roo!!!
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id='alert-dialog-description'>
+                  Do you really want to remove this awesome hospital from the
+                  system?
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button
+                  onClick={handleRemoveHospital}
+                  autoFocus
+                  variant='contained'
+                  disableElevation
+                >
+                  Yeppers
+                </Button>
+                <Button onClick={handleCloseAlert} variant='text'>
+                  Nope
+                </Button>
+              </DialogActions>
+            </Dialog>
           </Grid>
         )}
       </Grid>
