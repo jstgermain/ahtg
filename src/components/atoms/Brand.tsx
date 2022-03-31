@@ -1,5 +1,5 @@
-import { WrapWithLink } from '../../../hoc';
-import { LogoIcon } from '../icons';
+import { WrapWithLink } from '../../hoc';
+import { LogoIcon } from './icons';
 
 interface Props {
   classes?: string;

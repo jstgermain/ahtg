@@ -87,7 +87,6 @@ const AHTGTheme = createTheme({
     subtitle2: {
       color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      fontWeight: 700,
     },
     body1: {
       color: Grey[800],
@@ -98,7 +97,6 @@ const AHTGTheme = createTheme({
       color: Grey[800],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '1rem',
-      fontWeight: 700,
     },
     caption: {
       color: Grey[800],
@@ -109,7 +107,6 @@ const AHTGTheme = createTheme({
       color: Blue[500],
       fontSize: '0.875rem',
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      fontWeight: 600,
       textTransform: 'capitalize',
     },
     overline: {

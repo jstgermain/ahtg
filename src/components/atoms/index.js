@@ -1,2 +1,2 @@
-export { Brand } from './Brand';
-export { ContentLoader } from './ContentLoader';
+export { default as Brand } from './Brand';
+export { default as ContentLoader } from './ContentLoader';

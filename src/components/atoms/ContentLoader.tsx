@@ -1,7 +1,6 @@
 import CircularProgress from '@mui/material/CircularProgress';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { string } from 'yargs';
 
 interface Props {
   classes?: string;
@@ -15,7 +14,7 @@ interface Props {
   variation?: any;
 }
 
-export default (props: Props) => {
+const ContentLoader = (props: Props) => {
   const {
     classes,
     color,
@@ -54,3 +53,5 @@ export default (props: Props) => {
     </Container>
   );
 };
+
+export default ContentLoader;

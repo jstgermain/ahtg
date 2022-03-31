@@ -1,2 +1,2 @@
-export { Main } from './Main';
-export { NotFound } from './NotFound';
+export { default as Main } from './Main';
+export { default as NotFound } from './NotFound';

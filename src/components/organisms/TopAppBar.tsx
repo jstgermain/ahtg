@@ -3,7 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { Brand } from '../../atoms';
+import Brand from '../atoms/Brand';
 
 const TopAppBar = () => {
   const trigger = useScrollTrigger({
