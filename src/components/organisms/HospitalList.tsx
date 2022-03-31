@@ -10,6 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
 
 interface Props {
   anchorEl: null | HTMLElement;
@@ -29,6 +30,7 @@ const HospitalList = (props: Props) => {
     open,
     selectedHospital,
   } = props;
+  const theme = useTheme();
 
   return (
     <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
@@ -50,8 +52,19 @@ const HospitalList = (props: Props) => {
                 <MoreVertIcon />
               </IconButton>
             }
+            sx={{
+              [theme.breakpoints.down('sm')]: {
+                display: 'block',
+                width: '100%',
+              },
+            }}
           >
-            <ListItemAvatar sx={{ pr: 2 }}>
+            <ListItemAvatar
+              sx={{
+                pr: 2,
+                [theme.breakpoints.down('sm')]: { display: 'none' },
+              }}
+            >
               {/* Purposely using the name as src since the images are terrible quality, otherwise hospital.logo would be used */}
               <Avatar alt={hospital.name} src={hospital.name} />
             </ListItemAvatar>
