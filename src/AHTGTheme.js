@@ -1,11 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 import common from '@mui/material/colors/common';
-import 'typeface-roboto';
+import 'typeface-domine';
 import 'typeface-open-sans';
 import Blue from './constants/colors/Blue';
 import Grey from './constants/colors/Grey';
-
-const defaultTheme = createTheme();
 
 const AHTGTheme = createTheme({
   type: 'light',
@@ -53,193 +51,59 @@ const AHTGTheme = createTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     h1: {
-      color: Grey[800],
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontSize: '3.25rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
-      '&.mega': {
-        fontSize: '4.5rem',
-        [defaultTheme.breakpoints.down('md')]: {
-          fontSize: '3rem',
-        },
-        [defaultTheme.breakpoints.down('sm')]: {
-          fontSize: '2.25rem',
-        },
-        '& span': {
-          display: 'block',
-          fontSize: '2.5rem',
-          [defaultTheme.breakpoints.down('md')]: {
-            fontSize: '2rem',
-          },
-          [defaultTheme.breakpoints.down('sm')]: {
-            fontSize: '1.5rem',
-          },
-        },
-      },
+      color: Grey[500],
+      fontFamily: '"Domine", sans-serif',
+      fontSize: '3.375rem',
+      fontWeight: 400,
     },
     h2: {
-      color: Grey[800],
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      color: Grey[500],
+      fontFamily: '"Domine", sans-serif',
       fontSize: '3rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     h3: {
-      color: Grey[800],
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      color: Grey[500],
+      fontFamily: '"Domine", sans-serif',
       fontSize: '2.25rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     h4: {
-      color: Grey[800],
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      color: Grey[500],
+      fontFamily: '"Domine", sans-serif',
       fontSize: '1.5rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     h5: {
-      color: Grey[800],
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      color: Grey[500],
+      fontFamily: '"Domine", sans-serif',
       fontSize: '1.25rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
+    },
+    h6: {
+      color: Grey[500],
+      fontFamily: '"Domine", sans-serif',
     },
     subtitle1: {
-      color: Grey[600],
+      color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     subtitle2: {
-      color: Grey[600],
+      color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontWeight: 700,
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     body1: {
       color: Grey[800],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '1rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Helvetica Neue Regular", Helvetica, Arial, sans-serif;',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     body2: {
       color: Grey[800],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '1rem',
       fontWeight: 700,
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Helvetica Neue Regular", Helvetica, Arial, sans-serif;',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     caption: {
       color: Grey[800],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '0.75rem',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Helvetica Neue Regular", Helvetica, Arial, sans-serif;',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     button: {
       color: Blue[500],
@@ -247,36 +111,12 @@ const AHTGTheme = createTheme({
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontWeight: 600,
       textTransform: 'capitalize',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Helvetica Neue Regular", Helvetica, Arial, sans-serif;',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
     overline: {
       color: Grey[800],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '0.625rem',
       textTransform: 'capitalize',
-      '&.styled--link, &.styled--link a, & .styled--link': {
-        color: Grey[800],
-        fontFamily: '"Helvetica Neue Regular", Helvetica, Arial, sans-serif;',
-        textDecoration: 'none',
-        width: 'unset',
-        '&:hover': {
-          textDecoration: 'underline',
-          '@media (hover: none)': {
-            textDecoration: 'underline',
-          },
-        },
-      },
     },
   },
   components: {
@@ -292,23 +132,6 @@ const AHTGTheme = createTheme({
       styleOverrides: {
         root: {
           alignSelf: 'baseline',
-          '&.mgc-icon': {
-            fontSize: '3rem',
-          },
-        },
-        fontSizeLarge: {
-          '&.mgc-icon': {
-            fontSize: '12.5rem',
-            '&.mega': {
-              fontSize: '24rem',
-              [defaultTheme.breakpoints.down('md')]: {
-                fontSize: '18rem',
-              },
-              [defaultTheme.breakpoints.down('sm')]: {
-                fontSize: '21.5rem',
-              },
-            },
-          },
         },
       },
     },

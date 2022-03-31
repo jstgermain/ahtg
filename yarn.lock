@@ -8481,6 +8481,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typeface-domine@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-domine/-/typeface-domine-1.1.13.tgz#c4405a9d7f14c161136634b44b1043b8b559abe3"
+  integrity sha512-VjsQTdOyJ3w0MdDLUdWoQ0rSh0mPgZx/orC8RjVbkt2hIqnUBTUg20RUICV7fAzCam+MZyQ4oA0IyxnrLN/3yg==
+
 typeface-open-sans@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-1.1.13.tgz#32a09ebd7df59601e01ad81216f98ce641eeafd1"

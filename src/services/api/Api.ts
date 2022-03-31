@@ -11,11 +11,11 @@ const api = create({
 export const getHospitals = async () => {
   const response = await api.get(`/hospitals`);
 
-  if (!response.ok) {
-    return 'error';
-  }
+  // if (!response.ok) {
+  //   return 'error';
+  // }
 
-  return response.data;
+  return response;
 };
 
 //   return { kind: 'ok', catalog_types: response.data.catalog_types };
