@@ -15,7 +15,7 @@ const AHTGTheme = createTheme({
       contrastText: Blue[100],
     },
     secondary: {
-      light: Grey[400],
+      light: Grey[200],
       main: Grey[600],
       dark: Grey[800],
       contrastText: Grey[100],

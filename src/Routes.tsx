@@ -1,9 +1,17 @@
 import { Routes as Router, Route } from 'react-router-dom';
 import Container from '@mui/material/Container';
-import { Main, NotFound } from './components/pages';
+import { EditHospital, Main, NotFound } from './components/pages';
 
 const Routes = () => (
   <Router>
+    <Route
+      path='/hospital/:id'
+      element={
+        <Container maxWidth='lg'>
+          <EditHospital />
+        </Container>
+      }
+    />
     <Route
       path='/'
       element={

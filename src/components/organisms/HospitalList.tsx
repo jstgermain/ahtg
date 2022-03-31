@@ -11,6 +11,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+import { WrapWithLink } from '../../hoc/WrapWithLink';
 
 interface Props {
   anchorEl: null | HTMLElement;
@@ -100,7 +101,11 @@ const HospitalList = (props: Props) => {
           },
         }}
       >
-        <MenuItem>Edit - {selectedHospital}</MenuItem>
+        <MenuItem>
+          <WrapWithLink link={`/hospital/${selectedHospital}`}>
+            Edit - {selectedHospital}
+          </WrapWithLink>
+        </MenuItem>
         <MenuItem>Delete - {selectedHospital}</MenuItem>
       </Menu>
     </List>
