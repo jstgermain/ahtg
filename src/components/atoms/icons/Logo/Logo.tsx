@@ -1,6 +1,6 @@
 import SvgIcon from '@mui/material/SvgIcon';
 
-export default (props: any) => (
+const Logo = (props: any) => (
   <SvgIcon {...props} viewBox='0 0 139 32'>
     <path
       fill='#455560'
@@ -30,3 +30,5 @@ export default (props: any) => (
     />
   </SvgIcon>
 );
+
+export default Logo;

@@ -10,7 +10,7 @@ interface Props {
   variation?: string;
 }
 
-export default (props: Props) => {
+const Brand = (props: Props) => {
   const { classes, color, link, size, width, variation } = props;
 
   return (
@@ -39,3 +39,5 @@ export default (props: Props) => {
     </div>
   );
 };
+
+export default Brand;

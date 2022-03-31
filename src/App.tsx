@@ -1,13 +1,16 @@
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import { TopAppBar } from './components/organisms';
 import AHTGTheme from './AHTGTheme';
+import Routes from './Routes';
 
 function App() {
   return (
     <ThemeProvider theme={AHTGTheme}>
-      <div className='App'>
+      <BrowserRouter>
         <TopAppBar />
+        <Routes />
         <br />
         <br />
         <br />
@@ -50,7 +53,7 @@ function App() {
         <br />
         <br />
         <br />
-      </div>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

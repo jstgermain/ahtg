@@ -1,4 +1,3 @@
-import { cloneElement } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -6,7 +5,7 @@ import Container from '@mui/material/Container';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Brand } from '../../atoms';
 
-export default () => {
+const TopAppBar = () => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -22,7 +21,9 @@ export default () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <Toolbar />
+      <Toolbar sx={{ '@media all': { minHeight: 132 } }} />
     </>
   );
 };
+
+export default TopAppBar;
