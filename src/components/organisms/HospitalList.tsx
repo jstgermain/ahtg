@@ -69,7 +69,10 @@ const HospitalList = (props: Props) => {
               {/* Purposely using the name as src since the images are terrible quality, otherwise hospital.logo would be used */}
               <Avatar alt={hospital.name} src={hospital.name} />
             </ListItemAvatar>
-            <ListItemText primary={<strong>{hospital.name}</strong>} />
+            <ListItemText
+              primary={<strong>{hospital.name}</strong>}
+              sx={{ width: '25%' }}
+            />
             <ListItemText
               primary={
                 <Typography color='text.primary'>hospital.address</Typography>
@@ -79,8 +82,9 @@ const HospitalList = (props: Props) => {
                   {hospital.city}, {hospital.state} {hospital.zip}
                 </Typography>
               }
+              sx={{ width: '25%' }}
             />
-            <ListItemText primary={hospital.phone} />
+            <ListItemText primary={hospital.phone} sx={{ width: '25%' }} />
           </ListItem>
 
           <Divider component='li' />
