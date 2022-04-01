@@ -12,6 +12,7 @@ import Errors from '../../constants/Errors';
 import { WrapWithLink } from '../../hoc';
 import { Paper } from '@mui/material';
 import Blue from '../../constants/colors/Blue';
+import { AddEditHospitalForm } from '../atoms/molecules';
 
 type ParamTypes = {
   id: string;
@@ -79,7 +80,7 @@ const EditHospital = () => {
 
         {!loading && !isEmpty(hospital) && (
           <Grid item xs={12}>
-            <Typography variant='body1'>{hospital.address}</Typography>
+            <AddEditHospitalForm hospital={hospital} />
           </Grid>
         )}
       </Grid>
