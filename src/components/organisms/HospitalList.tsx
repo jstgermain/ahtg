@@ -75,10 +75,10 @@ const HospitalList = (props: Props) => {
             />
             <ListItemText
               primary={
-                <Typography color='text.primary'>hospital.address</Typography>
+                <Typography color='text.secondary'>hospital.address</Typography>
               }
               secondary={
-                <Typography color='text.primary'>
+                <Typography color='text.secondary'>
                   {hospital.city}, {hospital.state} {hospital.zip}
                 </Typography>
               }

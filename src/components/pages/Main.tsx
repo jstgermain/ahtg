@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { isEmpty } from 'ramda';
+import AddIcon from '@mui/icons-material/Add';
 import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -7,14 +8,20 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Fab from '@mui/material/Fab';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { getHospitals, removeHospital } from '../../services/api/Api';
 import ContentLoader from '../atoms/ContentLoader';
 import { HospitalList } from '../organisms';
 import Errors from '../../constants/Errors';
+import ConfirmationDialog from '../organisms/ConfirmationDialog';
+import { right } from '@popperjs/core';
+import Box from '@mui/material/Box';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>();
   const [selectedHospital, setSelectedHospital] = useState<string>();
@@ -73,7 +80,18 @@ const Main = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Typography variant='h1'>Hospitals</Typography>
+          <Box sx={{ position: 'relative' }}>
+            <Typography variant='h1'>Hospitals</Typography>
+
+            <Fab
+              color='primary'
+              aria-label='add'
+              sx={{ position: 'absolute', right: 0, top: 0 }}
+              onClick={() => navigate('/add-hospital')}
+            >
+              <AddIcon />
+            </Fab>
+          </Box>
         </Grid>
 
         {loading && (
@@ -102,35 +120,15 @@ const Main = () => {
               removeHospital={handleClickOpenAlert}
             />
 
-            <Dialog
-              open={openAlert}
-              onClose={handleCloseAlert}
-              aria-labelledby='alert-dialog-title'
-              aria-describedby='alert-dialog-description'
-            >
-              <DialogTitle id='alert-dialog-title'>
-                Whoa there buck-a-roo!!!
-              </DialogTitle>
-              <DialogContent>
-                <DialogContentText id='alert-dialog-description'>
-                  Do you really want to remove this awesome hospital from the
-                  system?
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button
-                  onClick={handleRemoveHospital}
-                  autoFocus
-                  variant='contained'
-                  disableElevation
-                >
-                  Yeppers
-                </Button>
-                <Button onClick={handleCloseAlert} variant='text'>
-                  Nope
-                </Button>
-              </DialogActions>
-            </Dialog>
+            <ConfirmationDialog
+              cancelButtonText='Nope'
+              content='Do you really want to remove this awesome hospital from the system?'
+              handleCloseAlert={handleCloseAlert}
+              handleRemoveHospital={handleRemoveHospital}
+              okButtonText='Yeppers'
+              openAlert={openAlert}
+              title='Whoa there buck-a-roo!!!'
+            />
           </Grid>
         )}
       </Grid>

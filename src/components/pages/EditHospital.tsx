@@ -52,7 +52,9 @@ const EditHospital = () => {
               <WrapWithLink underline='hover' color='secondary' link='/'>
                 Home
               </WrapWithLink>
-              <Typography color='secondary.light'>Breadcrumbs</Typography>
+              <Typography color='secondary.light'>
+                {hospital.name} - Edit
+              </Typography>
             </Breadcrumbs>
           </Paper>
         </Grid>

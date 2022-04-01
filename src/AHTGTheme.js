@@ -33,8 +33,8 @@ const AHTGTheme = createTheme({
       default: common.white,
     },
     text: {
-      primary: Grey[800],
-      secondary: Grey[100],
+      primary: Blue[500],
+      secondary: Grey[500],
       disabled: 'rgba(89, 89, 89, 0.38)',
       hint: 'rgba(89, 89, 89, 0.38)',
     },
@@ -122,13 +122,6 @@ const AHTGTheme = createTheme({
         colorPrimary: {
           backgroundColor: common.white,
           color: Grey[500],
-        },
-      },
-    },
-    MuiSvgIcon: {
-      styleOverrides: {
-        root: {
-          alignSelf: 'baseline',
         },
       },
     },

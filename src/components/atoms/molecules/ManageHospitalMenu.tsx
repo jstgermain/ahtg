@@ -31,9 +31,9 @@ const ManageHospitalMenu = (props: Props) => {
       }}
     >
       <MenuItem onClick={() => navigate(`/hospital/${selectedHospital}`)}>
-        Edit - {selectedHospital}
+        Edit
       </MenuItem>
-      <MenuItem onClick={removeHospital}>Delete - {selectedHospital}</MenuItem>
+      <MenuItem onClick={removeHospital}>Delete</MenuItem>
     </Menu>
   );
 };

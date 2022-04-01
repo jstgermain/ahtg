@@ -5,6 +5,7 @@ const api = create({
   headers: { Accept: 'application/json' },
 });
 
+// TODO: Add abulity to pass current page and paginate instead of returning all results
 export const getHospitals = async () => await api.get(`/hospitals`);
 
 export const getHospital = async (id: any) => await api.get(`/hospitals/${id}`);
