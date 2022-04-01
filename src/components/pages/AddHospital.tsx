@@ -83,7 +83,6 @@ const EditHospital = () => {
                       name='name'
                       type='text'
                       label='Hospital Name'
-                      size='small'
                     />
                   </Grid>
 
@@ -94,7 +93,6 @@ const EditHospital = () => {
                       name='address'
                       type='text'
                       label='Address'
-                      size='small'
                     />
                   </Grid>
 
@@ -105,7 +103,6 @@ const EditHospital = () => {
                       name='city'
                       type='text'
                       label='City'
-                      size='small'
                     />
                   </Grid>
 
@@ -116,7 +113,6 @@ const EditHospital = () => {
                       name='state'
                       type='text'
                       label='State'
-                      size='small'
                     />
                   </Grid>
 
@@ -127,7 +123,6 @@ const EditHospital = () => {
                       name='zip'
                       type='text'
                       label='Postal Code'
-                      size='small'
                     />
                   </Grid>
 
@@ -138,7 +133,6 @@ const EditHospital = () => {
                       name='phone'
                       type='tel'
                       label='Phone Number'
-                      size='small'
                     />
                   </Grid>
 
@@ -149,6 +143,7 @@ const EditHospital = () => {
                       color='primary'
                       disabled={isSubmitting}
                       onClick={submitForm}
+                      size='large'
                     >
                       Submit
                     </Button>

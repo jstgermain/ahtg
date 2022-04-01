@@ -89,17 +89,17 @@ const AHTGTheme = createTheme({
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     },
     body1: {
-      color: Grey[800],
+      color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '1rem',
     },
     body2: {
-      color: Grey[800],
+      color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '1rem',
     },
     caption: {
-      color: Grey[800],
+      color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '0.75rem',
     },
@@ -110,7 +110,7 @@ const AHTGTheme = createTheme({
       textTransform: 'capitalize',
     },
     overline: {
-      color: Grey[800],
+      color: Grey[500],
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       fontSize: '0.625rem',
       textTransform: 'capitalize',
@@ -122,6 +122,13 @@ const AHTGTheme = createTheme({
         colorPrimary: {
           backgroundColor: common.white,
           color: Grey[500],
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: Grey[300],
         },
       },
     },
