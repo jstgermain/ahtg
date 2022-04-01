@@ -75,7 +75,9 @@ const HospitalList = (props: Props) => {
             />
             <ListItemText
               primary={
-                <Typography color='text.secondary'>hospital.address</Typography>
+                <Typography color='text.secondary'>
+                  {hospital.address}
+                </Typography>
               }
               secondary={
                 <Typography color='text.secondary'>
