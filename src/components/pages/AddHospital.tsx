@@ -4,7 +4,7 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import LinearProgress from '@mui/material/LinearProgress';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { WrapWithLink } from '../../hoc';
-import { Container, Paper } from '@mui/material';
+import Paper from '@mui/material/Paper';
 import Blue from '../../constants/colors/Blue';
 import { Formik, Form, Field } from 'formik';
 import { TextField } from 'formik-mui';

@@ -1,18 +1,9 @@
-import { useEffect, useState } from 'react';
-import { isEmpty } from 'ramda';
-import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import { getHospitals, removeHospital } from '../../services/api/Api';
-import ContentLoader from '../atoms/ContentLoader';
-import { HospitalList } from '../organisms';
-import Errors from '../../constants/Errors';
 
 interface Props {
   cancelButtonText: string | undefined;
