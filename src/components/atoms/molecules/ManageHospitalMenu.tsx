@@ -1,6 +1,5 @@
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { WrapWithLink } from '../../../hoc/WrapWithLink';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {

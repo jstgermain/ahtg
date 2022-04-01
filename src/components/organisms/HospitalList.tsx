@@ -7,11 +7,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
-import { WrapWithLink } from '../../hoc/WrapWithLink';
 import ManageHospitalMenu from '../atoms/molecules/ManageHospitalMenu';
 
 interface Props {
